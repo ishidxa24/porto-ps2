@@ -128,16 +128,28 @@ export default function Projek() {
         </div>
 
         <div className="flex shrink-0 flex-col items-start gap-4 md:items-end">
-          {aktif.link && (
-            <a
-              href={aktif.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-lg bg-select px-6 py-3 font-semibold text-deep transition-transform hover:-translate-y-0.5"
-            >
-              {aktif.tombol}
-            </a>
-          )}
+          <div className="flex flex-wrap gap-3 md:justify-end">
+            {aktif.link && (
+              <a
+                href={aktif.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-lg bg-select px-6 py-3 font-semibold text-deep transition-transform hover:-translate-y-0.5"
+              >
+                {aktif.tombol}
+              </a>
+            )}
+            {aktif.linkKedua && (
+              <a
+                href={aktif.linkKedua}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-lg border border-ice/40 px-6 py-3 font-semibold text-snow transition-colors hover:border-select hover:text-select"
+              >
+                {aktif.tombolKedua}
+              </a>
+            )}
+          </div>
           {jumlah > 1 && (
             <div className="flex items-center gap-2 text-sm text-ice">
               <button
