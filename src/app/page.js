@@ -1,5 +1,4 @@
 import Bootscreen from "../components/Bootscreen";
-import Gerbang from "../components/Gerbang";
 import AnimasiScroll from "../components/AnimasiScroll";
 import SystemBar from "../components/SystemBar";
 import MenuUtama from "../components/MenuUtama";
@@ -15,19 +14,17 @@ export default function Home() {
     <main>
       <Bootscreen />
 
-      <Gerbang>
-        <AnimasiScroll />
-        <div id="konten">
-          <SystemBar />
-          <MenuUtama />
-          <ProfilPemain />
-          <Inventori />
-          <Pengalaman />
-          <Projek />
-          <Contact />
-          <Footer />
-        </div>
-      </Gerbang>
+      <AnimasiScroll />
+      <div id="konten">
+        <SystemBar />
+        <MenuUtama />
+        <ProfilPemain />
+        <Inventori />
+        <Pengalaman />
+        <Projek />
+        <Contact />
+        <Footer />
+      </div>
     </main>
   );
 }

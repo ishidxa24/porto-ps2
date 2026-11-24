@@ -172,7 +172,7 @@ export default function Bootscreen() {
     if (keluar.current) return;
     keluar.current = true;
 
-    const konten = document.getElementById("konten") ?? document.getElementById("login");
+    const konten = document.getElementById("konten");
     gsap.killTweensOf(".apung");
     window.scrollTo(0, 0);
 

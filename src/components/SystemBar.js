@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { usePemain } from "./Gerbang";
 import { kontak } from "../data/profil";
 
 const CFG = {
@@ -10,7 +9,6 @@ const CFG = {
 
 export default function SystemBar() {
   const [waktu, setWaktu] = useState(null);
-  const { pemain, keluar } = usePemain() ?? {};
 
   useEffect(() => {
     const id = setInterval(() => setWaktu(new Date()), CFG.jedaJam);
@@ -41,11 +39,6 @@ export default function SystemBar() {
         <span className="hidden tabular-nums sm:inline">
           {tanggal} <span className="ml-2">{jam}</span>
         </span>
-        {pemain && (
-          <span className="hidden md:inline">
-            Pemain: <span className="text-select">{pemain.firstName}</span>
-          </span>
-        )}
         <a
           href={kontak.cv}
           download
@@ -53,14 +46,6 @@ export default function SystemBar() {
         >
           Unduh CV
         </a>
-        {keluar && (
-          <button
-            onClick={keluar}
-            className="rounded-md px-3 py-2 text-ice transition-colors hover:text-select focus-visible:outline-2 focus-visible:outline-select"
-          >
-            Keluar
-          </button>
-        )}
       </div>
     </header>
   );
